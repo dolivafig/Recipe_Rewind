@@ -1,13 +1,15 @@
 [
   {
-    "name": "",
-    "ingredients": "",
-    "preparation": ""
+    "name": "test",
+    "ingredients": "test",
+    "preparation": "test",
+    "category": "test"
   },
   {
-    "name": "",
-    "ingredients": "",
-    "preparation": ""
+    "name": "test1",
+    "ingredients": "test1",
+    "preparation": "test1",
+    "category": "test1"
   },
   {
     "name": "",
