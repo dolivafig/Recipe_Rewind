@@ -2,28 +2,13 @@
   {
     "name": "test",
     "ingredients": "test",
-    "preparation": "test",
+    "method": "test",
     "category": "test"
   },
   {
     "name": "test1",
     "ingredients": "test1",
-    "preparation": "test1",
+    "method": "test1",
     "category": "test1"
-  },
-  {
-    "name": "",
-    "ingredients": "",
-    "preparation": ""
-  },
-  {
-    "name": "",
-    "ingredients": "",
-    "preparation": ""
-  },
-  {
-    "name": "",
-    "ingredients": "",
-    "preparation": ""
   }
 ]
