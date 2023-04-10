@@ -29,4 +29,24 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// Define the GET route for /create-account
+router.get('/create-account', (req, res) => {
+  // Render the create-account view using handlebars
+  res.render('create-account');
+});
+
+router.post('/create-account', async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    const user = await User.create({ name, email, password });
+    req.session.save(() => {
+      req.session.user_id = user.id;
+      req.session.logged_in = true;
+      res.status(200).json(user);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
