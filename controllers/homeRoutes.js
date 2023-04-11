@@ -1,15 +1,12 @@
 const router = require('express').Router();
-const { User, Recipe } = require('../models');
+const { Recipe } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
+    const recipeData = await Recipe.findAll({});
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const recipes = recipeData.map((project) => project.get({ plain: true }));
 
     const breakfastRecipes = await Recipe.findAll({
       where: { category: 'Breakfast' },
@@ -33,7 +30,7 @@ router.get('/', withAuth, async (req, res) => {
     };
 
     res.render('homepage', {
-      users,
+      recipes,
       logged_in: req.session.logged_in,
       categories,
     });
@@ -49,6 +46,13 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+
+// Define the GET route for /create-account
+router.get('/create-account', (req, res) => {
+  // Render the create-account view using handlebars
+  res.render('create-account');
 });
 
 module.exports = router;

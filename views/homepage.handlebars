@@ -6,3 +6,11 @@
   <li><a href="/category/lunch">Lunch</a></li>
   <li><a href="/category/dinner">Dinner</a></li>
 </ul>
+
+{{#each recipes as |recipe| }}
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <h2>{{recipe.name}} {{recipe.ingredients}} {{recipe.method}} {{recipe.category}}</h2>
+  </div>
+</div>
+{{/each}}
