@@ -1,18 +1,15 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Recipe } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
+    const recipeData = await Recipe.findAll({});
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const recipes = recipeData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      users,
+      recipes,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -38,6 +35,7 @@ router.get('/create-account', (req, res) => {
 router.post('/create-account', async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    
     const user = await User.create({ name, email, password });
     req.session.save(() => {
       req.session.user_id = user.id;

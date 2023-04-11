@@ -8,7 +8,7 @@ const createAccountHandler = async (event) => {
   
     if (name && email && password) {
       const response = await fetch('/api/users', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify({
           name,
           email,
@@ -18,7 +18,7 @@ const createAccountHandler = async (event) => {
       });
   
       if (response.ok) {
-        alert('User created successfully!');
+        document.location.replace('/');
       } else {
         alert('Failed to create user.');
       }
