@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Recipe } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -11,9 +11,31 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+    const breakfastRecipes = await Recipe.findAll({
+      where: { category: 'Breakfast' },
+      limit: 3,
+    });
+
+    const lunchRecipes = await Recipe.findAll({
+      where: { category: 'Lunch' },
+      limit: 3,
+    });
+
+    const dinnerRecipes = await Recipe.findAll({
+      where: { category: 'Dinner' },
+      limit: 3,
+    });
+
+    const categories = {
+      breakfast: breakfastRecipes,
+      lunch: lunchRecipes,
+      dinner: dinnerRecipes,
+    };
+
     res.render('homepage', {
       users,
       logged_in: req.session.logged_in,
+      categories,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -27,26 +49,6 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
-});
-
-// Define the GET route for /create-account
-router.get('/create-account', (req, res) => {
-  // Render the create-account view using handlebars
-  res.render('create-account');
-});
-
-router.post('/create-account', async (req, res) => {
-  try {
-    const { name, email, password } = req.body;
-    const user = await User.create({ name, email, password });
-    req.session.save(() => {
-      req.session.user_id = user.id;
-      req.session.logged_in = true;
-      res.status(200).json(user);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
 });
 
 module.exports = router;
