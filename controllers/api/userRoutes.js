@@ -21,7 +21,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -51,31 +50,53 @@ router.post('/create-account', async (req, res) => {
     const user = await User.create({ name, email, password });
     console.log(user)
 
-  //   fs.readFile('../seeds/userData.json', 'utf8', (err, data) => {
-  //     if (err) {
-  //         console.error(err);
-  //     } else {
-  //         // Convert string into JSON object
-  //         const parsedNotes = JSON.parse(data);
+    const data = fs.readFileSync('./seeds/userData.json', { encoding: 'utf8' });
 
-  //         // Add a new review
-  //         parsedNotes.push(user);
+    // Convert string into JSON object
+    const parsedUsers = JSON.parse(data);
+    parsedUsers.push(user);
+    fs.writeFileSync('./seeds/userData.json', JSON.stringify(parsedUsers, null, 4));
 
-  //         // Write updated reviews back to the file
-  //         fs.writeFile(
-  //             '../seeds/userData.json',
-  //             JSON.stringify(parsedNotes, null, 4),
-  //             (writeErr) =>
-  //                 writeErr
-  //                     ? console.error(writeErr)
-  //                     : console.info('Successfully updated notes!')
-  //         );
-  //     }
-  // });
+    res.json(parsedUsers);
+    return;
 
-}catch (err) {
+  } catch (err) {
+    console.log(err);
     res.status(400).json(err);
-  }
+  }
 });
+// router.post('/create-account', async (req, res) => {
+//   try {
+//     const { name, email, password } = req.body;
+//     const user = await User.create({ name, email, password });
+//     console.log(user)
+
+//     fs.readFile('./seeds/userData.json', 'utf8', (err, data) => {
+//       if (err) {
+//           console.error(err);
+//       } else {
+//           // Convert string into JSON object
+//           const parsedUsers = JSON.parse(data);
+
+//           // Add a new user
+//           parsedUsers.push(user);
+
+//           // Write updated reviews back to the file
+//           fs.writeFile('./seeds/userData.json',
+//               JSON.stringify(parsedUsers, null, 4),
+//               (writeErr) =>
+//                   writeErr
+//                       ? console.error(writeErr)
+//                       : console.info('Successfully updated notes!')
+//           );
+//       }
+//   });
+//   res.json(parsedUser);
+//   return;
+
+// }catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 module.exports = router;

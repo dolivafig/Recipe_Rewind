@@ -7,7 +7,7 @@ const createAccountHandler = async (event) => {
     const password = document.querySelector('#password-create').value.trim();
   
     if (name && email && password) {
-
+try {
       const response = await fetch('/api/users/create-account', {
         method: 'POST',
         body: JSON.stringify({name, email, password}),
@@ -16,9 +16,12 @@ const createAccountHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/login');
       } else {
-        console.log('Failed to create user.');
+        alert('Failed to create user.');
       }
-    }
+    }catch(err){
+      alert('Failed to create user.');
+        console.log(err);
+    }}
 };
   
   document.querySelector('.create-account-form').addEventListener('submit', createAccountHandler);
