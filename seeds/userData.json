@@ -18,35 +18,5 @@
         "name": "Damaris",
         "email": "damaris@msn.com",
         "password": "pass12345"
-    },
-    {
-        "id": 12,
-        "name": "Pedro",
-        "email": "pedro@gmail.com",
-        "password": "$2b$10$ygPfM8UBKa1hYcDg7gCiU.D.zjnqz5zsrMgcobgoXk.5V2tViXhGu"
-    },
-    {
-        "id": 15,
-        "name": "Juan",
-        "email": "juan@gmail.com",
-        "password": "$2b$10$p0MOxj0Tlu89jFSxMht5nOjeoISvgIqQX4xHh1gebMaXh8wFNWswy"
-    },
-    {
-        "id": 17,
-        "name": "Pedro",
-        "email": "pedro2@gmail.com",
-        "password": "$2b$10$ZHqKzRI4MwMFXvUc0aX.SOXbjlZ29xKPEQnKbgz6Qta64EJpCm6da"
-    },
-    {
-        "id": 18,
-        "name": "testing",
-        "email": "testing@gmail.com",
-        "password": "$2b$10$GPRGb6WGFGOYjmKIPR3bAODeKCaC/oq1j92njSFecYuyHJjIOMXoC"
-    },
-    {
-        "id": 19,
-        "name": "John",
-        "email": "john@gmail.com",
-        "password": "$2b$10$Vas/DG19vUkShEiJ1K8nsuBJx/9pZo5XBTvhZtLi4kLKn.87HmQ8W"
     }
 ]
