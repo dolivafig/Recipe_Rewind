@@ -10,7 +10,11 @@
 {{#each recipes as |recipe| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
-    <h2>{{recipe.name}} {{recipe.ingredients}} {{recipe.method}} {{recipe.category}}</h2>
+    <h2>Recipe: {{recipe.name}}</h2>
+    <p>Ingredients: {{recipe.ingredients}}</p>
+    <p>Method: {{recipe.method}}</p>
+    <p>Category: {{recipe.category}}</p>
   </div>
 </div>
 {{/each}}
+
