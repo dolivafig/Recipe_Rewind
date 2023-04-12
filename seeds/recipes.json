@@ -10,5 +10,29 @@
     "ingredients": "1/2 cup grated Parmesan cheese, 1 tsp paprika, 1 tsp garlic powder, 1 tsp salt, 1 tsp parsley, 1/2 tsp black peepper, 5 oz pork chops, 2 tbsp olive oil",
     "method": "1. Preheat the air fryer to 380 degrees F (190 degrees C).",
     "category": "Lunch"
+  },
+  {
+    "name": "Egg & HasH Brown Casserole",
+    "ingredients": "1/4 cup olive oil, 1 lb breakfast sausage, 1 yellow onion, 1 red bell pepper, salt/pepper, hash browns, 8 large eggs, 3/4 cup chicken broth, 1/2 cup sour cream, 8 oz. shredded cheddar cheese",
+    "method": "1. Preheat oven to 350 degrees F. Grease a 9x13 inch baking dish. 2. Cook sausage until browned and drain any excess oil. 3. Return sausage to skillet, cook onion, bell pepper until they are softened. 4. Cook hash browns and put into a bowl with sausage and veggies. 5. Whisk together eggs, broth, sour cream, stir in 1 cup of cheese. 6. Bake until eggs are set (about 30 minutes). 7. Top with remaining cheese and bake until cheese is melted (about 5 minutes).",
+    "category": "Breakfast"
+  },
+  {
+    "name": "Chicken & Broccoli Alfredo",
+    "ingredients": "1 lb chicken breast, 1/2 cup flour, 1/2 tsp salt, 1/2 tsp pepper, 1/2 tsp garlic powder, 1/2 tsp onion powder, 1/2 tsp paprika, 1/2 tsp dried basil, 1/2 tsp dried oregano, 1/2 tsp dried thyme, 1/2 tsp dried parsley, 1/2 tsp dried rosemary, 1/2 tsp dried sage, 1/2 tsp dried marjoram, 1/2 tsp dried tarragon, 1/2 tsp dried chives",
+    "method": "1. Preheat oven to 400 degrees F. 2. Place chicken in a large bowl. 3. In a small bowl, combine flour, salt, pepper, garlic powder, onion powder, paprika, basil, oregano, thyme, parsley, rosemary, sage, marjoram, tarragon, and chives. 4. Sprinkle flour mixture over chicken and toss to coat. 5. Place chicken in a single layer on a baking sheet. 6. Bake in the preheated oven until chicken is no longer pink in the center and the juices run clear, 20 to 25 minutes. 7. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).",
+    "category": "Dinner"
+  },
+  {
+    "name": "Grilled Chicken Club Wrap",
+    "ingredients": "1 lb chicken tenderloins, 8-10 slices of cooked bacon, 2 tomatoes thinly sliced, 6-8 tortillas, 1 cup salsa, 2 cups shredded cheese, 1 tsp oil, 1 tbsp seasoning",
+    "method": "1. Preheat grill to medium-high heat. 2. Brush chicken with oil and season with seasoning. 3. Grill chicken for 5-6 minutes per side or until cooked through. 4. Remove from grill and let cool. 5. Slice chicken into strips. 6. Wrap tortillas in foil and place on grill for 5-6 minutes or until warm. 7. Remove from grill and let cool. 8. Spread 1/4 cup salsa on each tortilla. 9. Top with chicken, bacon, tomatoes, and cheese. 10. Roll up and serve.",
+    "category": "Lunch"
+  }, 
+  {
+    "name": "Buttermilk Waffles",
+    "ingredients": "1 1/2 cups all-purpose flour, 1/2 cup white sugar, 1 tablespoon baking powder, 1 teaspoon salt, 1 1/2 cups buttermilk, 1 egg, 1/4 cup butter, melted",
+    "method": "1. Preheat waffle iron. 2. In a large bowl, sift together the flour, sugar, baking powder and salt. 3. Make a well in the center and pour in the buttermilk, egg and melted butter; mix until smooth. 4. Pour the batter onto the preheated waffle iron and cook until golden and crisp.",
+    "category": "Breakfast"
   }
 ]
