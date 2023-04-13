@@ -1,4 +1,5 @@
 const sequelize = require('../config/connection');
+
 const { User } = require('../models');
 const { Recipe } = require('../models');
 
