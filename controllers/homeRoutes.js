@@ -49,10 +49,12 @@ router.get('/login', (req, res) => {
 });
 
 
-// Define the GET route for /create-account
 router.get('/create-account', (req, res) => {
-  // Render the create-account view using handlebars
   res.render('create-account');
+});
+
+router.get('/addrecipe', (req, res) => {
+    res.render('addrecipe');
 });
 
 module.exports = router;

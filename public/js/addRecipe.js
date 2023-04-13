@@ -16,6 +16,7 @@ try {
       });
       if (response.ok) {
         document.location.replace('/');
+        alert('Succesfully added recipe!');
       } else {
         alert('Failed to add recipe.');
       }

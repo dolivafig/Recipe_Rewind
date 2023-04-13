@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { Recipe } = require('../../models');
 const fs = require('fs');
 
 router.post('/login', async (req, res) => {
@@ -24,7 +25,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
@@ -49,7 +50,6 @@ router.post('/create-account', async (req, res) => {
     const { name, email, password } = req.body;
     const user = await User.create({ name, email, password });
     console.log(user)
-    fs.readFileSync('./seeds/userData.json', { encoding: 'utf8' });
     const data = fs.readFileSync('./seeds/userData.json', { encoding: 'utf8' });
 
     // Convert string into JSON object
@@ -63,7 +63,25 @@ router.post('/create-account', async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
-  }
+  }
+});
+
+router.post('/addrecipe', async (req, res) => {
+  try {
+    const { recipeName, ingredients, method, category } = req.body;
+    const recipe = await Recipe.create({ recipeName, ingredients, method, category });
+    console.log(recipe)
+    const data = fs.readFileSync('./seeds/recipes.json', { encoding: 'utf8' });
+    const parsedRecipes = JSON.parse(data);
+    parsedRecipes.push(recipe);
+    fs.writeFileSync('./seeds/recipes.json', JSON.stringify(parsedRecipes, null, 4));
+    res.json(parsedRecipes);
+    return;
+
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
 });
 
 module.exports = router;
