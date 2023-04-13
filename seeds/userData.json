@@ -18,5 +18,17 @@
         "name": "Damaris",
         "email": "damaris@msn.com",
         "password": "pass12345"
+    },
+    {
+        "id": 7,
+        "name": "Genesis",
+        "email": "g@att.com",
+        "password": "$2b$10$WBSmnwsih9yDDis.eazR/uvDxEd.h8kCIGy8wNKDaj9shTg8SkGFu"
+    },
+    {
+        "id": 8,
+        "name": "Henry",
+        "email": "hen@aol.com",
+        "password": "$2b$10$PLVLh59L4oRCNVSzMTeCZeheahxhMJ9TMAI0EGbQHU8D/T.dLaEPC"
     }
 ]

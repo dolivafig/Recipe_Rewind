@@ -33,6 +33,7 @@ router.get('/', withAuth, async (req, res) => {
       recipes,
       logged_in: req.session.logged_in,
       categories,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(500).json(err);
