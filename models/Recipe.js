@@ -11,20 +11,20 @@ Recipe.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
+        recipeName: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         ingredients: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         method: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         category: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull : false,    
         },
     },
