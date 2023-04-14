@@ -85,4 +85,32 @@ router.post('/addrecipe', async (req, res) => {
   }
 });
 
+
+router.delete('/recipes/:id', async (req, res) => {
+  try {
+    const recipeId = req.params.id;
+    const recipe = await Recipe.findByPk(recipeId);
+    if (!recipe) {
+      res.status(404).json({ message: 'Recipe not found' });
+
+      console.log(err);
+      return;
+    }
+
+    await recipe.destroy();
+
+    const data = fs.readFileSync('./seeds/recipes.json', { encoding: 'utf8' });
+    const parsedRecipes = JSON.parse(data);
+    const updatedRecipes = parsedRecipes.filter(recipe => recipe.id !== recipeId);
+    fs.writeFileSync('./seeds/recipes.json', JSON.stringify(updatedRecipes, null, 4));
+
+    res.status(200).json({ message: 'Recipe deleted successfully' });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 module.exports = router;
