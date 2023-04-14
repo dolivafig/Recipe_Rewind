@@ -1,6 +1,9 @@
 <h1>Welcome {{user_name}} ! </h1>
 
 <h2>Categories</h2>
+<aside class="image">
+    <img id="image-api" alt="food">
+  </aside>
 <form class="form create-account-form">
 {{!-- <ul>
   <li><a href="/category/breakfast">Breakfast</a></li>
@@ -9,6 +12,7 @@
 </ul> --}}
   <button class="btn btn-primary" type="submit">Add Recipe</button>
 </form>
+
 {{#each recipes as |recipe| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
@@ -18,7 +22,7 @@
     <p>Category: {{recipe.category}}</p>
   </div>
   <aside class="recipeImage">
-    <img src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
+    <img id="image" src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
   </aside>
     <button class="btn btn-primary delete" data-id="{{recipe.id}}">Delete Recipe</button>
 </div>
