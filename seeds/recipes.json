@@ -40,5 +40,54 @@
         "ingredients": "1 1/2 cups all-purpose flour, 1/2 cup white sugar, 1 tablespoon baking powder, 1 teaspoon salt, 1 1/2 cups buttermilk, 1 egg, 1/4 cup butter, melted",
         "method": "1. Preheat waffle iron. 2. In a large bowl, sift together the flour, sugar, baking powder and salt. 3. Make a well in the center and pour in the buttermilk, egg and melted butter; mix until smooth. 4. Pour the batter onto the preheated waffle iron and cook until golden and crisp.",
         "category": "Breakfast"
+    },
+    {
+        "id": 7,
+        "recipeName": "Pasta",
+        "ingredients": "sauce and pasta",
+        "method": "put the sauce on the pasta, cook it, then eat",
+        "category": "Dinner"
+    },
+    {
+        "id": 8,
+        "recipeName": "Pasta",
+        "ingredients": "sauce and pasta",
+        "method": "testing",
+        "category": "Breakfast"
+    },
+    {
+        "id": 9,
+        "recipeName": "Pasta",
+        "ingredients": "sauce and pasta",
+        "method": "put the sauce on the pasta, cook it, then eat and eat again!!!!",
+        "category": "Breakfast"
+    },
+    {
+        "id": 10,
+        "recipeName": "food",
+        "ingredients": "test",
+        "method": "testing",
+        "category": "Dinner"
+    },
+    {
+        "id": 11,
+        "recipeName": "Pasta",
+        "ingredients": "sauce and pasta",
+        "method": "testing",
+        "category": "Lunch"
+    },
+    {
+        "id": 12,
+        "recipeName": "Pasta",
+        "ingredients": "test",
+        "method": "testing",
+        "category": "Breakfast"
+    },
+    {
+        "id": 13,
+        "recipeName": "brownies",
+        "ingredients": "brownie stuff",
+        "method": "cook it",
+        "category": "Breakfast"
     }
 ]

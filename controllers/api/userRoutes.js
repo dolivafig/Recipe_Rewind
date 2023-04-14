@@ -25,6 +25,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      req.session.user_name = userData.name;
 
       res.json({ user: userData, message: 'You are now logged in!' });
     });
@@ -83,5 +84,33 @@ router.post('/addrecipe', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+router.delete('/recipes/:id', async (req, res) => {
+  try {
+    const recipeId = req.params.id;
+    const recipe = await Recipe.findByPk(recipeId);
+    if (!recipe) {
+      res.status(404).json({ message: 'Recipe not found' });
+
+      console.log(err);
+      return;
+    }
+
+    await recipe.destroy();
+
+    const data = fs.readFileSync('./seeds/recipes.json', { encoding: 'utf8' });
+    const parsedRecipes = JSON.parse(data);
+    const updatedRecipes = parsedRecipes.filter(recipe => recipe.id !== recipeId);
+    fs.writeFileSync('./seeds/recipes.json', JSON.stringify(updatedRecipes, null, 4));
+
+    res.status(200).json({ message: 'Recipe deleted successfully' });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

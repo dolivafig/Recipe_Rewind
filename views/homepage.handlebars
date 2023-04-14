@@ -1,4 +1,4 @@
-<h1>Welcome to Recipe Rewind</h1>
+<h1>Welcome {{user_name}} ! </h1>
 
 <h2>Categories</h2>
 <aside class="image">
@@ -24,9 +24,9 @@
   <aside class="recipeImage">
     <img id="image" src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
   </aside>
-  </div>
+    <button class="btn btn-primary delete" data-id="{{recipe.id}}">Delete Recipe</button>
+</div>
 {{/each}}
 
   <script src="/js/home.js"></script>
-
-
+  <script src="/js/addRecipe.js"></script>
