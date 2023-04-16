@@ -53,7 +53,9 @@ router.get('/login', (req, res) => {
 
 
 router.get('/create-account', (req, res) => {
-  res.render('create-account');
+  res.render('create-account', {
+    style: 'login.css'
+  });
 });
 
 router.get('/addrecipe', (req, res) => {
