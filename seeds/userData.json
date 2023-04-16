@@ -18,5 +18,17 @@
         "name": "Damaris",
         "email": "damaris@msn.com",
         "password": "pass12345"
+    },
+    {
+        "id": 123,
+        "name": "dammal",
+        "email": "info@gmail.com",
+        "password": "$2b$10$I.tXRV5pJJcVGMY8JTcvoO1mzNbrn0EwjKgkhXoOmAatGZMYRB5jC"
+    },
+    {
+        "id": 124,
+        "name": "dmal",
+        "email": "infoM@gmail.com",
+        "password": "$2b$10$XeX4wamtKP3qVHul8tqUP.ncIqfLB/RjXIx331gtbz055MWF9JJ9."
     }
 ]
