@@ -6,7 +6,8 @@ const { Recipe } = require('../models');
 const userData = require('./userData.json');
 const recipeData = require('./recipes.json');
 
-const seedDatabase = async () => {
+module.exports = {
+seedDatabase : async () => {
   await sequelize.sync({ force: true });
 
   await User.bulkCreate(userData, {
@@ -18,8 +19,6 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+}
+}
 
-  process.exit(0);
-};
-
-seedDatabase();
