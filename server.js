@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
+// -- used to insert seedDatabase() to seed jawsdb on heroku
 // const {seedDatabase} = require('./seeds/seed');
 
 const sequelize = require('./config/connection');
@@ -39,5 +40,7 @@ app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
+  // -- function called out to seed the jawsdb
+  // seedDatabase();
   app.listen(PORT, () => console.log('Now listening'));
 });

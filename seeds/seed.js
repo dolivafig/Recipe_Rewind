@@ -23,3 +23,20 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+// FOLLOWING WAS USED TO EXPORT THE seedDatabase () to seed the JAWSDB on the server.
+
+// module.exports = {
+//   seedDatabase: async () => {
+//     await sequelize.sync({ force: false });
+  
+//     await User.bulkCreate(userData, {
+//       individualHooks: true,
+//       returning: true,
+//     });
+  
+//     await Recipe.bulkCreate(recipeData, {
+//       individualHooks: true,
+//       returning: true,
+//     });
+//   }};
