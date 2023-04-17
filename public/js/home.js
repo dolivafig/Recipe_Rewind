@@ -30,3 +30,28 @@ async function CuratedPhotos() {
 
 // CuratedPhotos();
 
+const deleteRecipe = async (event) => {
+    event.preventDefault();
+    console.log('deleting test')
+    const recipeId = event.target.dataset.id;
+    try {
+        const response = await fetch(`/api/users/recipes/${recipeId}`, {
+            method: 'DELETE',
+        });
+        if (response.ok) {
+            document.location.replace('/');
+            alert('Successfully deleted recipe!');
+        } else {
+            alert('Failed to delete recipe.');
+        }
+    } catch (err) {
+        alert('Failed to delete recipe!');
+        console.log(err);
+    }
+};
+
+const deleteButtons = document.querySelectorAll('.delete');
+console.log(deleteButtons);
+for (const deleteButton of deleteButtons) {
+    deleteButton.addEventListener('click', deleteRecipe);
+}
