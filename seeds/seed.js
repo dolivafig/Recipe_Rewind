@@ -6,8 +6,7 @@ const { Recipe } = require('../models');
 const userData = require('./userData.json');
 const recipeData = require('./recipes.json');
 
-module.exports = {
-seedDatabase: async () => {
+const seedDatabase = async () => {
   await sequelize.sync({ force: false });
 
   await User.bulkCreate(userData, {
@@ -20,7 +19,24 @@ seedDatabase: async () => {
     returning: true,
   });
 
-  // process.exit(0);
-}};
+  process.exit(0);
+};
 
-// seedDatabase();
+seedDatabase();
+
+// FOLLOWING WAS USED TO EXPORT THE seedDatabase () to seed the JAWSDB on the server.
+
+// module.exports = {
+//   seedDatabase: async () => {
+//     await sequelize.sync({ force: false });
+  
+//     await User.bulkCreate(userData, {
+//       individualHooks: true,
+//       returning: true,
+//     });
+  
+//     await Recipe.bulkCreate(recipeData, {
+//       individualHooks: true,
+//       returning: true,
+//     });
+//   }};
