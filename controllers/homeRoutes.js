@@ -33,7 +33,11 @@ router.get('/', withAuth, async (req, res) => {
       recipes,
       logged_in: req.session.logged_in,
       categories,
+<<<<<<< HEAD
       style: 'jass.css'
+=======
+      user_name: req.session.user_name,
+>>>>>>> 1c3031493b0cf6d9d0f72ffbe604152897b74635
     });
   } catch (err) {
     res.status(500).json(err);

@@ -1,14 +1,18 @@
-<h1>Welcome to Recipe Rewind</h1>
+<h1>Welcome {{user_name}} ! </h1>
 
 <h2>Categories</h2>
+<aside class="image">
+    <img id="image-api" alt="food">
+  </aside>
 <form class="form create-account-form">
 {{!-- <ul>
   <li><a href="/category/breakfast">Breakfast</a></li>
   <li><a href="/category/lunch">Lunch</a></li>
   <li><a href="/category/dinner">Dinner</a></li>
 </ul> --}}
-  <button class="btn btn-primary" type="submit">Add Recipe</button>
+  <button class="uk-button uk-button-primary" type="submit">Add Recipe</button>
 </form>
+
 {{#each recipes as |recipe| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
@@ -18,11 +22,11 @@
     <p>Category: {{recipe.category}}</p>
   </div>
   <aside class="recipeImage">
-    <img src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
+    <img id="image" src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
   </aside>
-  </div>
+    <button class="uk-button uk-button-danger" data-id="{{recipe.id}}">Delete Recipe</button>
+</div>
 {{/each}}
 
   <script src="/js/home.js"></script>
-
-
+  <script src="/js/addRecipe.js"></script>

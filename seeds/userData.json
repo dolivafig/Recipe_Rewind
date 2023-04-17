@@ -20,6 +20,7 @@
         "password": "pass12345"
     },
     {
+<<<<<<< HEAD
         "id": 123,
         "name": "dammal",
         "email": "info@gmail.com",
@@ -30,5 +31,17 @@
         "name": "dmal",
         "email": "infoM@gmail.com",
         "password": "$2b$10$XeX4wamtKP3qVHul8tqUP.ncIqfLB/RjXIx331gtbz055MWF9JJ9."
+=======
+        "id": 7,
+        "name": "Genesis",
+        "email": "g@att.com",
+        "password": "$2b$10$WBSmnwsih9yDDis.eazR/uvDxEd.h8kCIGy8wNKDaj9shTg8SkGFu"
+    },
+    {
+        "id": 8,
+        "name": "Henry",
+        "email": "hen@aol.com",
+        "password": "$2b$10$PLVLh59L4oRCNVSzMTeCZeheahxhMJ9TMAI0EGbQHU8D/T.dLaEPC"
+>>>>>>> 1c3031493b0cf6d9d0f72ffbe604152897b74635
     }
 ]
