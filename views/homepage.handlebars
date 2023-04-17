@@ -10,7 +10,7 @@
   <li><a href="/category/lunch">Lunch</a></li>
   <li><a href="/category/dinner">Dinner</a></li>
 </ul> --}}
-  <button class="btn btn-primary" type="submit">Add Recipe</button>
+  <button class="uk-button uk-button-primary" type="submit">Add Recipe</button>
 </form>
 
 {{#each recipes as |recipe| }}
@@ -24,7 +24,7 @@
   <aside class="recipeImage">
     <img id="image" src="/assets/{{recipe.id}}.png" alt="{{recipe.recipeName}}">
   </aside>
-    <button class="btn btn-primary delete" data-id="{{recipe.id}}">Delete Recipe</button>
+    <button class="uk-button uk-button-danger" data-id="{{recipe.id}}">Delete Recipe</button>
 </div>
 {{/each}}
 
