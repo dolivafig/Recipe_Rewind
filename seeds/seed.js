@@ -10,10 +10,10 @@ module.exports = {
 seedDatabase : async () => {
   // await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  // await User.bulkCreate(userData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
 
   await Recipe.bulkCreate(recipeData, {
     individualHooks: true,
