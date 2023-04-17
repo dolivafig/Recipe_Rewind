@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-// const {seedDatabase} = require('./seeds/seed');
+const {seedDatabase} = require('./seeds/seed');
 
 const sequelize = require('./config/connection');
 
@@ -39,5 +39,6 @@ app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
+  seedDatabase();
   app.listen(PORT, () => console.log('Now listening'));
 });
