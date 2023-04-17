@@ -7,7 +7,7 @@
 
 ## Installation
 
-No installation necessary, just visit the page at https://reciperewind2.herokuapp.com/
+No installation necessary, just visit the page at https://reciperewind3.herokuapp.com/
 
 
 ## Usage
@@ -25,7 +25,7 @@ No installation necessary, just visit the page at https://reciperewind2.herokuap
 
 ## Link to live website
 
-[link](https://reciperewind2.herokuapp.com/)
+[link](https://reciperewind3.herokuapp.com/)
 
 ## Link to github repository
 
