@@ -39,7 +39,6 @@ app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
+  seedDatabase();
   app.listen(PORT, () => console.log('Now listening'));
 });
-
-seedDatabase();
