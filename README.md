@@ -7,7 +7,7 @@
 
 ## Installation
 
-No installation necessary, just visit the page at https://reciperewind2.herokuapp.com/
+No installation necessary, just visit the page at https://reciperewind3.herokuapp.com/
 
 
 ## Usage
@@ -25,13 +25,8 @@ No installation necessary, just visit the page at https://reciperewind2.herokuap
 
 ## Link to live website
 
-[link](https://reciperewind2.herokuapp.com/)
+https://reciperewind3.herokuapp.com/
 
 ## Link to github repository
 
-[link](https://github.com/dolivafig/Recipe_Rewind)
-
-## The Happy Hour screenshot
-
-![Screenshot](./assets/images/Screenshot1.png)
-![Screenshot](./assets/images/Screenshot2.png)
+https://github.com/dolivafig/Recipe_Rewind
