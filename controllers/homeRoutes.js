@@ -33,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
       recipes,
       logged_in: req.session.logged_in,
       categories,
-      user_name: req.session.user_name,
+      style: 'jass.css'
     });
   } catch (err) {
     res.status(500).json(err);
@@ -46,12 +46,16 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    style: 'login.css'
+  });
 });
 
 
 router.get('/create-account', (req, res) => {
-  res.render('create-account');
+  res.render('create-account', {
+    style: 'login.css'
+  });
 });
 
 router.get('/addrecipe', (req, res) => {
